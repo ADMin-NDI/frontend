@@ -12,10 +12,15 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ArticlesComponent } from './features/articles/articles.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { CommunityComponent } from './features/community/community.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     ArticlesComponent,
+    CommunityComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -29,7 +34,9 @@ import { AppRoutingModule } from './app-routing.module';
     // Material 
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatButtonToggleModule,
+    MatIconModule,
+    MatMenuModule,
   ],
   providers: [
   ],

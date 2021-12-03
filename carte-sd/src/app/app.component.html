@@ -1,11 +1,27 @@
 <div fxFlex fxLayout="column">
-  <mat-toolbar fxFlex fxLayoutAlign="space-around center">
-    <button mat-raised-button color="primary" (click)="navigation('home')">Home</button>
-    <button mat-raised-button color="primary" (click)="navigation('articles')">Articles</button>
-    <button mat-raised-button color="primary" (click)="navigation('search')">Recherche</button>
-  
-    <!-- TODO:Search BAR -->
-  
+  <mat-toolbar class="toolbar" fxFlex fxLayout="row" fxLayoutAlign="start center">
+    <div fxFlex fxLayout="row" fxLayoutAlign="start">
+      <div class="isCurrentPage() button" fxLayoutAlign="start center" (click)="navigation('home')">
+        <mat-icon>home</mat-icon>Home
+      </div>
+      <div class="button" fxLayoutAlign="start center" (click)="navigation('articles')">
+        <mat-icon>article</mat-icon>Articles
+      </div>
+      <div class="button" fxLayoutAlign="start center" (click)="navigation('community')">
+        <mat-icon>home</mat-icon>Communauté
+      </div>
+    </div>
+
+    <div fxFlex fxLayout="row" fxLayoutAlign="end">
+      <button mat-button [matMenuTriggerFor]="menu">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="navigation('profile')">Profile</button>
+        <button mat-menu-item (click)="navigation('settings')">Settings</button>
+        <button mat-menu-item (click)="navigation('logout')">Logout</button>
+      </mat-menu>
+    </div>
   </mat-toolbar>
 
   <router-outlet></router-outlet>
