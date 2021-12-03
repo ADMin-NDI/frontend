@@ -12,7 +12,17 @@
       </div>
     </div>
 
+    <!-- Search -->
+    
+
     <div fxFlex fxLayout="row" fxLayoutAlign="end">
+      <div>
+        <mat-form-field appearance="legacy">
+          <input matInput [(ngModel)]="search" #input />
+            <mat-icon class="icon-search" matSuffix>search</mat-icon>
+        </mat-form-field>
+      </div>
+
       <button mat-button [matMenuTriggerFor]="menu">
         <mat-icon>account_circle</mat-icon>
       </button>
