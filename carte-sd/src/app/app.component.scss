@@ -6,6 +6,12 @@
     top: 0;
     width: 100%;
     z-index: 1;
+
+    .navigation {
+        .button .mat-icon {
+            margin-right: 5px;
+        }
+    }
 }
 
 .button {
