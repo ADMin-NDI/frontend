@@ -1,4 +1,4 @@
-import { ArticlesComponent } from './features/articles/articles/articles.component';
+import { ArticlesComponent } from './features/articles/articles.component';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
